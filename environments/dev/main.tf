@@ -21,7 +21,6 @@ resource "okta_app_group_assignment" "engineers_to_app" {
 # PLUS your new module code
 module "native_oidc_app" {
   source = "../../modules/okta-app-native-oidc"
-  ...
 }
 
 module "web_saml_app" {
