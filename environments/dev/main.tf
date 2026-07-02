@@ -25,8 +25,6 @@ module "native_oidc_app" {
 source = "../../modules/okta-app-native-oidc"
 
   app_label              = "Test Native OIDC App"
-  grant_types            = ["authorization_code", "refresh_token"]
-  response_types         = ["code"]
   redirect_uris          = ["http://localhost:3000/callback"]
   post_logout_redirect_uris = ["http://localhost:3000"]
 }
@@ -71,8 +69,6 @@ module "web_oidc_app" {
 source = "../../modules/okta-app-web-oidc"
 
   app_label              = "Test Web OIDC App"
-  grant_types            = ["authorization_code", "refresh_token"]
-  response_types         = ["code"]
   redirect_uris          = ["http://localhost:3002/callback"]
   post_logout_redirect_uris = ["http://localhost:3002"]
 }
