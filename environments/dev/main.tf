@@ -98,8 +98,6 @@ source = "../../modules/okta-app-web-saml"
 
   app_label            = "Test Web SAML App"
   sso_url              = "http://localhost:3003/saml/consume"
-  recipient            = "http://localhost:3003/saml/consume"
-  destination          = "http://localhost:3003/saml/consume"
   audience             = "http://localhost:3003"
 }
 
