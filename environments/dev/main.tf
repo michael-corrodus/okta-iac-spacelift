@@ -49,8 +49,6 @@ module "spa_oidc_app" {
 source = "../../modules/okta-app-spa-oidc"
 
   app_label              = "Test SPA OIDC App"
-  grant_types            = ["authorization_code", "refresh_token"]
-  response_types         = ["code"]
   redirect_uris          = ["http://localhost:3001/callback"]
   post_logout_redirect_uris = ["http://localhost:3001"]
 }
