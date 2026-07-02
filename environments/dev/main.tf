@@ -1,14 +1,10 @@
-module "Salesforce_app" {
-  source        = "./modules/okta-app-web-saml"
-  app_label     = "Salesforce Global"
-  sso_url     = "https://salesforce.global.com"
-  recipient   = "https://salesforce.global.com"
-  destination = "https://salesforce.global.com"
-  audience    = "https://salesforce.global.com"
+# Simple direct resource (no modules needed)
+resource "okta_group" "developers" {
+  name        = "Terraform Developers"
+  description = "Group created via Terraform and Spacelifts"
 }
 
-module "dev_group" {
-  source            = "../../modules/okta-groups"
-  group_name        = "Salesforce Global Users"
-  group_description = "Salesforce Users Group"
+resource "okta_group" "engineers" {
+  name        = "Engineers"
+  description = "Engineering team"
 }
