@@ -21,6 +21,9 @@ resource "okta_app_group_assignment" "engineers_to_app" {
 # PLUS your new module code
 module "native_oidc_app" {
   source = "../../modules/okta-app-native-oidc"
+  app_label              = "New App 2"
+  redirect_uris          = ["http://localhost:3002/callback"]
+  post_logout_redirect_uris = ["http://localhost:3002"]
 }
 
 module "web_saml_app" {
