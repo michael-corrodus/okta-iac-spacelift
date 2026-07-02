@@ -25,8 +25,6 @@ module "native_oidc_app" {
 source = "../../modules/okta-app-native-oidc"
 
   app_label              = "Test Native OIDC App"
-  grant_types            = ["authorization_code", "refresh_token"]
-  response_types         = ["code"]
   redirect_uris          = ["http://localhost:3000/callback"]
   post_logout_redirect_uris = ["http://localhost:3000"]
 }
@@ -49,8 +47,6 @@ module "spa_oidc_app" {
 source = "../../modules/okta-app-spa-oidc"
 
   app_label              = "Test SPA OIDC App"
-  grant_types            = ["authorization_code", "refresh_token"]
-  response_types         = ["code"]
   redirect_uris          = ["http://localhost:3001/callback"]
   post_logout_redirect_uris = ["http://localhost:3001"]
 }
@@ -73,8 +69,6 @@ module "web_oidc_app" {
 source = "../../modules/okta-app-web-oidc"
 
   app_label              = "Test Web OIDC App"
-  grant_types            = ["authorization_code", "refresh_token"]
-  response_types         = ["code"]
   redirect_uris          = ["http://localhost:3002/callback"]
   post_logout_redirect_uris = ["http://localhost:3002"]
 }
@@ -98,8 +92,6 @@ source = "../../modules/okta-app-web-saml"
 
   app_label            = "Test Web SAML App"
   sso_url              = "http://localhost:3003/saml/consume"
-  recipient            = "http://localhost:3003/saml/consume"
-  destination          = "http://localhost:3003/saml/consume"
   audience             = "http://localhost:3003"
 }
 
