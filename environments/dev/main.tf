@@ -1,4 +1,4 @@
-resource "web_saml_app" {
+module "web_saml_app" {
 source = "../../modules/okta-app-web-saml"
 
   app_label            = "New SAML App"
