@@ -22,7 +22,7 @@ resource "okta_group" "product" {
 # ============================================================================
 
 module "native_oidc_app" {
-  source = "./modules/okta-app-native-oidc"
+source = "../../modules/okta-app-native-oidc"
 
   app_label              = "Test Native OIDC App"
   grant_types            = ["authorization_code", "refresh_token"]
@@ -46,7 +46,7 @@ resource "okta_app_group_assignment" "engineers_to_native_oidc" {
 # ============================================================================
 
 module "spa_oidc_app" {
-  source = "./modules/okta-app-spa-oidc"
+source = "../../modules/okta-app-spa-oidc"
 
   app_label              = "Test SPA OIDC App"
   grant_types            = ["authorization_code", "refresh_token"]
@@ -70,7 +70,7 @@ resource "okta_app_group_assignment" "developers_to_spa_oidc" {
 # ============================================================================
 
 module "web_oidc_app" {
-  source = "./modules/okta-app-web-oidc"
+source = "../../modules/okta-app-web-oidc"
 
   app_label              = "Test Web OIDC App"
   grant_types            = ["authorization_code", "refresh_token"]
@@ -94,7 +94,7 @@ resource "okta_app_group_assignment" "product_to_web_oidc" {
 # ============================================================================
 
 module "web_saml_app" {
-  source = "./modules/okta-app-web-saml"
+source = "../../modules/okta-app-web-saml"
 
   app_label            = "Test Web SAML App"
   sso_url              = "http://localhost:3003/saml/consume"
