@@ -19,7 +19,7 @@ resource "okta_app_group_assignment" "engineers_to_oidc" {
 }
 
 # 2. SAML APP
-resource "okta_app_saml" "test_saml_app" {
+resource "web_saml" "test_saml_app" {
   label                = "Test SAML App"
   single_sign_on_url             = "http://localhost:3000/saml/consume"
   recipient                      = "http://localhost:3000/saml/consume"
@@ -61,7 +61,7 @@ resource "okta_app_group_assignment" "developers_to_saml" {
 }
 
 # 3. PRECONFIG APP
-resource "okta_app_saml" "test_preconfig_app" {
+resource "web_saml" "test_preconfig_app" {
   label                = "Test Preconfig App (Slack)"
   single_sign_on_url             = "https://yourslack.slack.com/sso/saml"
   recipient                      = "https://yourslack.slack.com/sso/saml"
