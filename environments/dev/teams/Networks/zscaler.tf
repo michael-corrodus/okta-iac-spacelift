@@ -1,10 +1,8 @@
 module "zscaler" {
-source = "../../../../../modules/okta-app-native-oidc"
-  
-  app_label              = "Zscaler"
-  grant_types            = ["authorization_code", "refresh_token"]
-  response_types         = ["code"]
-  redirect_uris          = ["https://your-org.zscaler.com/sso/callback"]
+  source = "../../../../modules/okta-app-native-oidc"
+
+  app_label             = "Zscaler"
+  redirect_uris         = ["https://your-org.zscaler.com/sso/callback"]
   post_logout_redirect_uris = ["https://your-org.zscaler.com"]
 }
 
