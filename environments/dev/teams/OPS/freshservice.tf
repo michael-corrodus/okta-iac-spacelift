@@ -1,5 +1,5 @@
 module "freshservice" {
-  source = "../../../modules/okta-app-web-oidc"
+  source = "../../../../modules/okta-app-web-oidc"
   
   app_label              = "Freshservice"
   grant_types            = ["authorization_code", "refresh_token"]

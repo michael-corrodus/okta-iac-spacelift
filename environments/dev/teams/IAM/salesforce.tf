@@ -1,5 +1,5 @@
 module "salesforce" {
-  source = "../../../modules/okta-app-web-saml"
+  source = "../../../../modules/okta-app-web-saml"
   
   app_label   = "Salesforce"
   sso_url     = "https://your-org.my.salesforce.com/services/auth/sso/OrganizationLogin"
