@@ -1,5 +1,5 @@
 module "zscaler" {
-source = "../../../../../modules/okta-app-native-oidc"
+source = "../../../../modules/okta-app-native-oidc"
   
   app_label              = "Zscaler"
   grant_types            = ["authorization_code", "refresh_token"]

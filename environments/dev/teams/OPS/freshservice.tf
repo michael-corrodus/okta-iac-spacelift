@@ -1,11 +1,9 @@
 module "freshservice" {
-  source = "../../../../modules/okta-app-web-oidc"
-  
-  app_label              = "Freshservice"
-  grant_types            = ["authorization_code", "refresh_token"]
-  response_types         = ["code"]
-  redirect_uris          = ["https://your-domain.freshservice.com/oauth/callback"]
-  post_logout_redirect_uris = ["https://your-domain.freshservice.com"]
+  source = "../../../../modules/okta-app-web-saml"
+
+  app_label = "Freshservice"
+  sso_url   = "https://your-domain.freshservice.com/sso/saml"
+  audience  = "https://your-domain.freshservice.com"
 }
 
 resource "okta_app_group_assignment" "freshservice_users" {
