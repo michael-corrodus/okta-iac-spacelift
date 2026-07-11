@@ -1,4 +1,4 @@
-module "monday.com" {
+module "mondaycom" {
   source = "../../../../modules/okta-app-native-oidc"
 
   app_label             = "monday.com - IAM"
