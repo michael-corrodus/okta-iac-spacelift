@@ -1,4 +1,4 @@
-module "mondaycom" {
+module "monday" {
   source = "../../../../modules/okta-app-native-oidc"
 
   app_label             = "monday.com - IAM"
@@ -7,6 +7,6 @@ module "mondaycom" {
 }
 
 resource "okta_app_group_assignment" "monday_users" {
-  app_id   = module.mondaycom_app_id
+  app_id   = module.monday_app_id
   group_id = okta_group.monday_users.id
 }
