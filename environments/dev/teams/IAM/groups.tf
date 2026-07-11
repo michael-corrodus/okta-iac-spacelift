@@ -3,7 +3,7 @@ resource "okta_group" "salesforce_users" {
   description = "Salesforce application users"
 }
 
-resource "okta_group" "monday_users" {
-  name        = "Monday.com Users"
-  description = "Access to monday.com app users"
+resource "okta_group" "monday_app" {
+  name        = "Monday App"
+  description = "Monday application users"
 }
